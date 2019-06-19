@@ -1,0 +1,32 @@
+[
+    {
+        "model": "octopus.lightbulb",
+        "pk": 1,
+        "fields": {
+            "name": "Energy saving light bulb",
+            "item_no": "E27 ES",
+            "img": "bad",
+            "wattage": 25,
+            "quantity": 4,
+            "brand": "Philips",
+            "weight": 77,
+            "height": 12.6,
+            "width": 6.2,
+            "depth": 6.2,
+            "colour": "Cool daylight",
+            "description": "Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches on instantly, no waiting around and flicker free features...",
+            "price": 12.99,
+            "performance200": 1.9,
+            "performance250": 2.55,
+            "performance300": 0.2,
+            "performance350": 0.1,
+            "performance400": 0.05,
+            "average200": 2.1,
+            "average250": 3.0,
+            "average300": 3.5,
+            "average350": 0.3,
+            "average400": 0.2,
+            "stock": 50
+        }
+    }
+]
