@@ -5,7 +5,7 @@
         "fields": {
             "name": "Energy saving light bulb",
             "item_no": "E27 ES",
-            "img": "bad",
+            "img": "https://i.imgur.com/wZsJB7r.png",
             "wattage": 25,
             "quantity": 4,
             "brand": "Philips",
