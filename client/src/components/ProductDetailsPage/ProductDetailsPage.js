@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import PropTypes from 'prop-types';
+
+// Redux
+import { connect } from 'react-redux';
+import { getProduct } from '../../redux/actions/productAction';
 
 // Reactstrap
 import { Button, Col, Container, Row } from 'reactstrap';
@@ -12,48 +16,43 @@ import ProductPerf from './sections/ProductPerf';
 import ProductSpec from './sections/ProductSpec';
 import SubHeading from '../partials/SubHeading/SubHeading';
 
-export default class ProductDetailsPage extends Component {
-    state = {
-        hasLoaded: false,
-        quantity: 1
-    }
+class ProductDetailsPage extends Component {
 
-    componentDidMount() {
-        axios.get('/api/lightbulb')
-            .then(res => {
-                console.log('Res data is', res.data[0]);
-                this.setState({ product: res.data[0], hasLoaded: true })
-            });
+    componentWillMount() {
+        console.log('Triggered');
+        
+        this.props.getProduct();
     }
 
     render() {
-        const product = this.state.product;
+        const product = this.props.product.product;
+        console.log('Anything?', product);
         return(
             <section>
-                {this.state.hasLoaded 
+                {this.props.product.hasLoaded 
                     ?
                     
                     <Container>
                         <ProductDetails 
-                            name={product.name}
-                            img={product.img}
-                            wattage={product.wattage}
-                            quantity={product.quantity}
-                            price={product.price}
-                            selectedQuantity={this.state.quantity}
+                            name={product[0].name}
+                            img={product[0].img}
+                            wattage={product[0].wattage}
+                            quantity={product[0].quantity}
+                            price={product[0].price}
+                            selectedQuantity={this.props.product.quantity}
                         />
 
-                        <ProductDescription description={product.description}/>
+                        <ProductDescription description={product[0].description}/>
 
                         <ProductSpec 
                             labels={['Brand', 'Item weight', 'Dimensions', 'Item model number', 'Colour']}
-                            fields={[product.brand, `${product.weight}g`, `${product.height}x${product.width}x${product.depth}x`, product.item_no, product.colour]}
+                            fields={[product[0].brand, `${product[0].weight}g`, `${product[0].height}x${product[0].width}x${product[0].depth}x`, product[0].item_no, product[0].colour]}
                         />
 
                         <ProductPerf 
-                            productName={product.name}
-                            performanceData={[product.performance200, product.performance250, product.performance300, product.performance350, product.performance400]}
-                            averageData={[product.average200, product.average250, product.average300, product.average350, product.average400]}
+                            productName={product[0].name}
+                            performanceData={[product[0].performance200, product[0].performance250, product[0].performance300, product[0].performance350, product[0].performance400]}
+                            averageData={[product[0].average200, product[0].average250, product[0].average300, product[0].average350, product[0].average400]}
                         />
                     </Container>
 
@@ -65,3 +64,14 @@ export default class ProductDetailsPage extends Component {
         )
     }
 }
+
+ProductDetailsPage.PropTypes = {
+    fetchProduct: PropTypes.func.isRequired,
+    product: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+    product: state.product
+});
+
+export default connect(mapStateToProps, { getProduct })(ProductDetailsPage);

@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+// Redux
+import { Provider } from 'react-redux';
+import store from './redux/store';
+
 // Styling
 import 'bootstrap/dist/css/bootstrap.css';
 import './scss/main.scss';
@@ -13,11 +17,14 @@ import Footer from './components/Layout/Footer';
 class App extends Component {
     render() {
         return (
-            <div id="page">
-                <Header />
+            <Provider store={store}>
+                <div id="page">
+                    <Header />
                     <ProductDetailsPage />
-                <Footer />
-            </div>
+                    <Footer />
+                </div>
+            </Provider>
+            
         )
     }
 }
