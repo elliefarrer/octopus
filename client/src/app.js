@@ -7,6 +7,7 @@ import './scss/main.scss';
 
 // Components
 import Header from './components/Layout/Header';
+import ProductDetailsPage from './components/ProductDetailsPage/ProductDetailsPage';
 import Footer from './components/Layout/Footer';
 
 class App extends Component {
@@ -14,7 +15,7 @@ class App extends Component {
         return (
             <div id="page">
                 <Header />
-                <h1>Hello</h1>
+                    <ProductDetailsPage />
                 <Footer />
             </div>
         )
@@ -22,5 +23,6 @@ class App extends Component {
 }
 
 ReactDOM.render(
-    <App />,
+    <App/>,
     document.getElementById('root'));
+

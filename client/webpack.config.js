@@ -37,7 +37,7 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     inline: true,
-    port: 4000,
+    port: 3000,
     open: true,
     proxy: {
       '/api': {
