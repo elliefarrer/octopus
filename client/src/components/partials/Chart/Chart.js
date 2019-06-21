@@ -10,19 +10,32 @@ const Chart = ({ productName, performanceData, averageData }) => {
             {
                 label: productName,
                 fill: false,
+                borderColor: 'rgb(252, 21, 118)',
                 data: performanceData
             },
             {
                 label: 'Average',
                 fill: false,
+                borderColor: 'rgb(255, 255, 255)',
                 data: averageData
             }
         ]
     }
 
+    const options = {
+        yAxes : [
+            {
+                scaleLabel: {
+                    fontSize: 16,
+                    color: 'white'
+                }
+            }
+        ]
+    }
+
     return (
-        <div>
-            <Line data={data}/>
+        <div className="mt-4">
+            <Line data={data} options={options}/>
         </div>
     )
 }

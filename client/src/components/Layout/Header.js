@@ -4,7 +4,7 @@ import { Col, Collapse, Navbar, NavbarBrand, NavbarToggler, Row } from 'reactstr
 
 const Header = function() {
   return (
-    <Navbar>
+    <Navbar className="mb-3">
         <Row>
             <Col>
                 <NavbarBrand>

@@ -6,27 +6,27 @@ import { Table } from 'reactstrap';
 
 const SpecTable = ({ labels, fields }) => {
     return(
-        <Table>
+        <Table className="mt-4">
             <tbody>
                 <tr>
-                    <td>{labels[0]}</td>
-                    <td>{fields[0]}</td>
+                    <td className="text-white">{labels[0]}</td>
+                    <td className="text-white">{fields[0]}</td>
                 </tr>
                 <tr>
-                    <td>{labels[1]}</td>
-                    <td>{fields[1]}</td>
+                    <td className="text-white">{labels[1]}</td>
+                    <td className="text-white">{fields[1]}</td>
                 </tr>
                 <tr>
-                    <td>{labels[2]}</td>
-                    <td>{fields[2]}</td>
+                    <td className="text-white">{labels[2]}</td>
+                    <td className="text-white">{fields[2]}</td>
                 </tr>
                 <tr>
-                    <td>{labels[3]}</td>
-                    <td>{fields[3]}</td>
+                    <td className="text-white">{labels[3]}</td>
+                    <td className="text-white">{fields[3]}</td>
                 </tr>
                 <tr>
-                    <td>{labels[4]}</td>
-                    <td>{fields[4]}</td>
+                    <td className="text-white">{labels[4]}</td>
+                    <td className="text-white">{fields[4]}</td>
                 </tr> 
             </tbody>
         </Table>

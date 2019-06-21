@@ -5,7 +5,7 @@ import SpecTable from '../../partials/SpecTable/SpecTable';
 
 const ProductSpec = ({ labels, fields }) => {
     return (
-        <section>
+        <section className="mb-5">
             <SubHeading text='Specifications' />
 
             <SpecTable
@@ -13,7 +13,7 @@ const ProductSpec = ({ labels, fields }) => {
                 fields={fields}
             />
 
-            <span><u>Show less</u></span>
+            <span className="text-primary cta"><u>Show less</u></span>
         </section>
     )
 }

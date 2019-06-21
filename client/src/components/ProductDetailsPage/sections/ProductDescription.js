@@ -4,11 +4,11 @@ import SubHeading from '../../partials/SubHeading/SubHeading';
 
 const ProductDescription = ({ description }) => {
     return (
-        <div>
+        <section className="mb-5">
             <SubHeading text='Description' />
-            <p>{description}</p>
-            <span><u>Show more</u></span>
-        </div>
+            <p className="mt-4">{description}</p>
+            <span className="text-primary cta"><u>Show more</u></span>
+        </section>
     )
 }
 

@@ -1,0 +1,18 @@
+section {
+    .container {
+        div {
+            h5 {
+                color: $greyBlue;
+                font-weight: 300;
+            }
+        }
+        button {
+            background-color: $greyBlue;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+        .w-50.btn-secondary {
+            background-color: $pink;
+        }
+    }
+}

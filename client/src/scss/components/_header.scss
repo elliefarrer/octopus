@@ -1,0 +1,11 @@
+nav {
+        border-top: 2px solid $pink;
+        .navbar-brand {
+            h1:not(strong) {
+                font-weight: 300;
+                strong {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
