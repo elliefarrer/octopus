@@ -28,26 +28,26 @@ If I had more time, I would have done more research into using GraphQL and Apoll
 ## Technologies Used
 
 ### Back End
-> Python
-> Django
-> SQLite
+* Python
+* Django
+* SQLite
 
 ### Front End
-> HTML5
-> SCSS
-> Bootstrap/Reactstrap
-> ReactJS
-> Redux
-> React-Redux
-> Redux-Thunk
-> Axios
-> React-Chart.js
-> Babel
-> Webpack
+* HTML5
+* SCSS
+* Bootstrap/Reactstrap
+* ReactJS
+* Redux
+* React-Redux
+* Redux-Thunk
+* Axios
+* React-Chart.js
+* Babel
+* Webpack
 
 ### Testing
-> Mocha
-> Chai
-> JSDOM
-> Enzyme
+* Mocha
+* Chai
+* JSDOM
+* Enzyme
 
