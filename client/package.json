@@ -17,7 +17,7 @@
     "bluebird": "^3.5.5",
     "bootstrap": "^4.3.1",
     "chai": "^4.2.0",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "jsdom": "^15.1.1",
